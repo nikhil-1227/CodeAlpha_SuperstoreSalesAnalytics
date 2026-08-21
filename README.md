@@ -11,7 +11,7 @@ This repository covers multiple tasks combining web scraping, exploratory data a
 |------|-------------|--------|
 | **Task 1** | Web Scraping | ✅ Complete |
 | **Task 2** | Exploratory Data Analysis (EDA) | ✅ Complete |
-| **Task 3** | Data Visualization | 🔄 In Progress |
+| **Task 3** | Data Visualization | ✅ Complete |
 
 *(Per CodeAlpha guidelines, minimum 2-3 tasks required for internship completion)*
 
@@ -45,11 +45,11 @@ Extract structured book data (title, price, rating, availability) from a public 
 ### Output
 - **File:** [`web_scraping/books_data.csv`](./web_scraping/books_data.csv)
 - **Records scraped:** 1,000 books
-- **Columns:** `Title`, `Price_gbp`, `Rating`, `Availability`
+- **Columns:** `title`, `price_gbp`, `rating`, `availability`
 
 **Sample output:**
 
-| Title | Price_gbp | Rating | Availability |
+| title | price_gbp | rating | availability |
 |-------|-----------|--------|--------------|
 | A Light in the Attic | 51.77 | 3 | In stock |
 | Tipping the Velvet | 53.74 | 1 | In stock |
@@ -140,9 +140,41 @@ eda/
 
 ---
 
-## 🔄 Task 3: Data Visualization
+## ✅ Task 3: Data Visualization
 
-*Coming soon — Power BI dashboard built on cleaned Superstore Sales data.*
+### Objective
+Build an interactive dashboard that transforms the cleaned Superstore Sales data into clear, decision-supporting visuals.
+
+### Tools Used
+- **Power BI Desktop**
+
+### Dataset
+`superstore_cleaned.csv` (output of the Task 2 EDA cleaning process).
+
+### Dashboard Components
+| Visual | Insight |
+|---|---|
+| KPI Card — Total Sales | 2.30M overall sales |
+| KPI Card — Total Profit | 286.40K overall profit |
+| KPI Card — Order Count | Distinct count of orders |
+| Bar Chart — Profit by Category | Technology and Office Supplies drive most profit; Furniture lags |
+| Column Chart — Sales by Region | West leads in sales, followed by East, Central, South |
+| Line Chart — Sales by Month | Reveals seasonal sales trend across the year |
+| Region Slicer | Lets viewers filter the entire dashboard by region |
+
+### Output
+- **Dashboard file:** [`powerbi/Superstore_Dashboard.pbix`](./powerbi/Superstore_Dashboard.pbix)
+- **Screenshot:** [`powerbi/dashboard_screenshot.png`](./powerbi/dashboard_screenshot.png)
+
+### How to View
+Open `Superstore_Dashboard.pbix` in [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (free download).
+
+### Files
+```
+powerbi/
+├── Superstore_Dashboard.pbix   # Power BI dashboard file
+└── dashboard_screenshot.png    # Dashboard preview image
+```
 
 ---
 
