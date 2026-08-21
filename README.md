@@ -10,7 +10,7 @@ This repository covers multiple tasks combining web scraping, exploratory data a
 | Task | Description | Status |
 |------|-------------|--------|
 | **Task 1** | Web Scraping | ✅ Complete |
-| **Task 2** | Exploratory Data Analysis (EDA) | 🔄 In Progress |
+| **Task 2** | Exploratory Data Analysis (EDA) | ✅ Complete |
 | **Task 3** | Data Visualization | 🔄 In Progress |
 
 *(Per CodeAlpha guidelines, minimum 2-3 tasks required for internship completion)*
@@ -73,9 +73,70 @@ web_scraping/
 
 ---
 
-## 🔄 Task 2: Exploratory Data Analysis (EDA)
+## ✅ Task 2: Exploratory Data Analysis (EDA)
 
-*Coming soon — using the Superstore Sales dataset (Kaggle) with pandas.*
+### Objective
+Explore the Superstore Sales dataset to understand its structure, clean it, and uncover meaningful business insights using statistics and visualizations.
+
+### Tools Used
+- **Python 3.13**
+- `pandas` – data loading, cleaning, aggregation
+- `matplotlib` / `seaborn` – visualizations
+
+### Dataset
+[Sample Superstore Sales Dataset (Kaggle)](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final) — 9,994 rows, 21 columns of retail order data (sales, profit, discount, region, category, customer details).
+
+### Approach
+1. Loaded and inspected the dataset (structure, data types, shape)
+2. Checked data quality — missing values, duplicate rows
+3. Cleaned the data:
+   - Converted `Order Date` / `Ship Date` to datetime
+   - Removed duplicate records
+   - Engineered new columns: `Order Year`, `Order Month`, `Shipping Days`
+4. Ran descriptive statistics on Sales, Profit, Discount, and Quantity
+5. Answered 5 key business questions using groupby aggregations and correlation analysis
+6. Visualized findings with 4 charts
+
+### Key Insights
+
+| Question | Finding |
+|---|---|
+| Most profitable category | **Technology** (₹145,454 profit) |
+| Biggest loss-making sub-category | **Tables** (-₹17,725 loss) |
+| Best performing region | **West** (highest sales & profit) |
+| Discount vs Profit relationship | **Negative correlation (-0.219)** — higher discounts are associated with lower profit |
+| Top customer by sales | **Sean Miller** (₹25,043) |
+
+### Visualizations
+| Chart | Insight |
+|---|---|
+| `profit_by_category.png` | Profit breakdown across Technology, Office Supplies, Furniture |
+| `sales_by_region.png` | Sales & profit comparison across 4 regions |
+| `discount_vs_profit.png` | Scatter plot showing discount's negative impact on profit |
+| `monthly_sales_trend.png` | Sales trend over time, showing seasonality |
+
+### Output
+- **Cleaned dataset:** [`eda/superstore_cleaned.csv`](./eda/superstore_cleaned.csv)
+- **Charts:** [`eda/`](./eda/) folder (4 PNG files)
+
+### How to Run
+```bash
+cd eda
+pip install pandas matplotlib seaborn
+python eda_analysis.py
+```
+
+### Files
+```
+eda/
+├── eda_analysis.py            # EDA script
+├── Sample - Superstore.csv    # Raw dataset
+├── superstore_cleaned.csv     # Cleaned dataset
+├── profit_by_category.png
+├── sales_by_region.png
+├── discount_vs_profit.png
+└── monthly_sales_trend.png
+```
 
 ---
 
