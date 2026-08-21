@@ -45,11 +45,11 @@ Extract structured book data (title, price, rating, availability) from a public 
 ### Output
 - **File:** [`web_scraping/books_data.csv`](./web_scraping/books_data.csv)
 - **Records scraped:** 1,000 books
-- **Columns:** `title`, `price_gbp`, `rating`, `availability`
+- **Columns:** `Title`, `Price_gbp`, `Rating`, `Availability`
 
 **Sample output:**
 
-| title | price_gbp | rating | availability |
+| Title | Price_gbp | Rating | Availability |
 |-------|-----------|--------|--------------|
 | A Light in the Attic | 51.77 | 3 | In stock |
 | Tipping the Velvet | 53.74 | 1 | In stock |
